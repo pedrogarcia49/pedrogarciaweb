@@ -1,0 +1,139 @@
+img {
+    user-select: none;
+    pointer-events: none;
+}
+
+/* Nav */
+
+#main-header {
+    background: linear-gradient(to right, rgb(8 145 178), rgb(8, 121, 150));
+}
+
+.nav-item {
+    filter: saturate(110%);
+}
+
+.nav-item:hover {
+    cursor: pointer;
+    background: linear-gradient(to bottom, rgb(8 145 178), rgb(6, 135, 167));
+}
+
+/* ___ */
+
+/* Principal */
+
+#profile-container{
+    box-shadow: 4px 4px 20px 2px rgba(0, 0, 0, 0.4);
+    border-radius: 250px;
+}
+
+#profile-image {
+    border-radius: 250px;
+    background-image: url(./images/pedro.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.social-link:hover {
+    filter: invert(25%);
+}
+
+/* ____*/
+
+/* Tecnologias */
+
+
+#frontend #li-html {
+    list-style-image: url('images/li/li-html.png');
+}
+
+#frontend #li-css {
+    list-style-image: url('images/li/li-css.png');
+}
+
+#frontend #li-js {
+    list-style-image: url('images/li/li-js.png');
+}
+
+#frontend #li-react {
+    list-style-image: url('images/li/li-react.png');
+}
+
+#frontend #li-bootstrap {
+    list-style-image: url('images/li/li-bootstrap.png');
+}
+
+#frontend #li-tailwind {
+    list-style-image: url('images/li/li-tailwind.png');
+}
+
+
+#backend #li-node {
+    list-style-image: url('images/li/li-node.png');
+}
+
+#backend #li-express {
+    list-style-image: url('images/li/li-express.png');
+}
+
+#backend #li-mysql {
+    list-style-image: url('images/li/li-mysql.png');
+}
+
+/* _____ */
+
+/* Proyectos */
+
+#gym-app {
+    background-image: url(./images/gym-app.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#simon{
+    background-image: url(./images/simon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#tictactoe {
+    background-image: url(./images/tictactoe.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+#project-filter:hover {
+    background: linear-gradient(to bottom, rgba(0,0,0, 0.0), rgba(0,0,0, 0.8));
+}
+
+/* _____ */
+
+/* Utilities */
+
+
+.filter-5 {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,rgba(0,0,0, 0.0), rgba(0,0,0, 0.5));
+}
+
+.filter-6 {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,rgba(0,0,0, 0.0), rgba(0,0,0, 0.6));
+}
+
+.filter-7 {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,rgba(0,0,0, 0.0), rgba(0,0,0, 0.7));
+}
+
+.filter-8 {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,rgba(0,0,0, 0.0), rgba(0,0,0, 0.8));
+}
+
+/* _____ */
