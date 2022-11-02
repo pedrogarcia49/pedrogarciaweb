@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 src/main.js",
+    "start": "pm2 start src/main.js",
+    "stop": "pm2 stop src/main.js",
     "stw": "npx tailwindcss -i ./src/tailwind.css -o ./public/index.css --watch"
   },
   "author": "Pedro Garcia",
