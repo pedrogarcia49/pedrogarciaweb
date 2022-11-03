@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css"/>
-    <link rel="stylesheet" href="./main.css"/>
+    <link rel="stylesheet" href="index.css"/>
+    <link rel="stylesheet" href="main.css"/>
     <title>Pedro Garcia</title>
 </head>
 <body class="w-fit">
@@ -18,7 +18,7 @@
                 <ul class="flex place-content-center w-full md:w-auto float-left mx-auto md:mt-0 md:ml-12 lg:ml-24 space-x-3 md:space-x-6  text-white font-medium">
                     <li id="nav-item1" class="nav-item bg-cyan-600 p-4 rounded-sm shadow-md">Tecnologías</li>
                     <li id="nav-item2" class="nav-item bg-cyan-600 p-4 rounded-sm shadow-md">Proyectos</li>
-                    <li id="nav-item3" class="nav-item bg-cyan-600 p-4 rounded-sm shadow-md">Info. y Contacto</li>
+                    <li id="nav-item3" class="nav-item bg-cyan-600 p-4 rounded-sm shadow-md">Contacto</li>
                 </ul>
             </div>
         </div>
@@ -57,10 +57,10 @@
 
         <div class="h-fit py-28 bg-cyan-500 text-white grid place-items-center" >
             <h2 class="text-5xl text-center mb-24 font-bold text-shadow-md">Tecnologías</h2>
-            <div class="text-3xl md:w-3/6 grid grid-cols-2 gap-4">
+            <div class="text-xl p-4 w-full md:text-3xl lg:w-4/6 grid grid-cols-2 gap-4">
 
                 <div id="frontend-ctn" class="bg-teal-600 rounded-sm shadow-xl">
-                    <div class="bg-teal-700 rounded-t-sm w-full p-2 h-14 text-center">
+                    <div class="bg-teal-700 rounded-t-sm w-full p-2 h-14 text-3xl md:text-4xl text-center">
                         <label class="text-amber-400 font-semibold">Front-end</label>
                     </div>
                     <ul id="frontend" class="p-8">
@@ -72,18 +72,19 @@
                         <li id="li-tailwind" class="ml-8 my-2">Tailwind</li>
                     </ul>
                 </div>
-
+                
                 <div id="backend-ctn" class="bg-cyan-600 rounded-sm shadow-xl">
-                    <div class="bg-cyan-700 rounded-t-sm w-full p-2 h-14 text-center">
+                    <div class="bg-cyan-700 rounded-t-sm w-full p-2 h-14 text-3xl md:text-4xl text-center">
                         <label class="text-amber-400 font-semibold">Back-end</label>
                     </div>
                     <ul id="backend" class="p-8">
                         <li id="li-node" class="ml-8 my-2">NodeJs</li>
                         <li id="li-express" class="ml-8 my-2">Express</li>
                         <li id="li-mysql" class="ml-8 my-2">MySQL</li>
+                        <li id="li-nginx" class="ml-8 my-2">Nginx</li>
                     </ul>
                 </div>
-
+                
             </div>
     
         </div>
@@ -92,7 +93,7 @@
             <div class="h-48 pt-14">
                 <h2 class="text-6xl text-center my-auto font-bold text-shadow-md text-white">Proyectos</h>
             </div>
-            <div class="h-fit w-full p-12 grid mx-auto lg:grid-cols-2 gap-14">
+            <div class="h-fit w-full p-2 grid mx-auto lg:grid-cols-2 gap-14">
                 
                 <div id="gym-app" class="bg-slate-300">
                     <div id="project-filter" class="hover:cursor-pointer shadow-xl filter-7 bg-black grid place-content-start">
@@ -124,13 +125,24 @@
     
             </div>
         </div>
-
-    </main>
-    <footer class="h-24 bg-cyan-200 grid place-content-center">
-        <div class="whitespace-nowrap">
-            <h1 class="text-xl ">Web desarrollada con <img src="images/li/li-tailwind.png" class="inline-block"/> Tailwind y <img src="images/li/li-react.png" class="inline-block"/> React</h1>
+        
+    <div class="h-fit bg-cyan-400 text-white py-12 grid place-content-center">
+        <h1 class="text-5xl text-center font-semibold text-shadow-md">Contacto</h1>
+        <div class="p-2 grid">
+            <div class="mt-12 bg-cyan-300 shadow-md w-fit p-16 py-24 rounded-sm">
+                <form class="grid gap-4 text-xl text-neutral-600" action="https://formsubmit.co/contacto@pedrogarciaweb.com" method="POST">
+                    <label>Nombre completo</label>
+                    <input class="p-2 pr-24 block" type="text" name="name" placeholder="Tu nombre"/>
+                    <label>Correo electronico</label>
+                    <input class="p-2 pr-24 block" type="email" name="email" placeholder="nombre@email.com"/>
+                    <label>Mensaje</label>
+                    <textarea class="p-2 pr-24 pb-4 block" name="message" placeholder="Hola! este es un mensaje de ejemplo"></textarea>
+                    <button id="submit" class="bg-amber-400 px-24 shadow-md rounded-sm mt-4 p-1 text-black" type="submit">Enviar</button>
+                </form>
+            </div>
         </div>
-    </footer>
+    </div>
+    </main>
 </body>
 <script src="./main.js"></script>
 </html>

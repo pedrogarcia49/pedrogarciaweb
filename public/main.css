@@ -80,6 +80,10 @@ img {
     list-style-image: url('images/li/li-mysql.png');
 }
 
+#backend #li-nginx {
+    list-style-image: url('images/li/li-nginx.png');
+}
+
 /* _____ */
 
 /* Proyectos */
@@ -105,6 +109,19 @@ img {
 
 #project-filter:hover {
     background: linear-gradient(to bottom, rgba(0,0,0, 0.0), rgba(0,0,0, 0.8));
+}
+
+/* _____ */
+
+/* Contacto */
+
+textarea {
+    font-size: 0.8rem;
+    resize: none;
+}
+
+#submit:hover {
+    background: linear-gradient(to bottom, rgb(251 191 36), rgb(235, 173, 16));
 }
 
 /* _____ */

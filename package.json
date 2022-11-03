@@ -6,6 +6,7 @@
   "scripts": {
     "start": "pm2 start src/main.js",
     "stop": "pm2 stop src/main.js",
+    "dev": "nodemon src/main.js",
     "stw": "npx tailwindcss -i ./src/tailwind.css -o ./public/index.css --watch"
   },
   "author": "Pedro Garcia",
@@ -17,6 +18,8 @@
     "tailwindcss": "^3.1.8"
   },
   "devDependencies": {
+    "connect-livereload": "^0.6.1",
+    "livereload": "^0.9.3",
     "tailwindcss-textshadow": "^2.1.3"
   }
 }

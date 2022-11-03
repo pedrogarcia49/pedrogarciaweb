@@ -1,5 +1,6 @@
 const navItem1 = document.getElementById('nav-item1')
 const navItem2 = document.getElementById('nav-item2')
+const textarea = document.getElementById('textarea')
 
 let width = window.innerWidth
 
