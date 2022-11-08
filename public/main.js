@@ -1,39 +1,42 @@
-setInterval(() => {
-  location.reload()
-}, 110000)
-
 //Nav
 const navItem1 = document.getElementById('nav-item1')
 const navItem2 = document.getElementById('nav-item2')
+const navItem3 = document.getElementById('nav-item3')
 const textarea = document.getElementById('textarea')
 
-let width = window.innerWidth
+let scrWidth = window.innerWidth
 
-let width1 = 850
-let width2 = 1640
+let width1 = 875
+let width2 = 1810
+let width3 = 2640
+
+function scrollW (w) {
+  // Medium-Lg devices
+  if (scrWidth <= 1224 && scrWidth > 840) {
+    w = w * 1.18
+  // Medium devices
+  } else if (scrWidth <= 840 && scrWidth > 640) {
+    w = w * 1.45
+  // Small devices
+  } else if (scrWidth <= 640) {
+    w = w * 1.43
+  }
+  window.scroll({
+    top: w,
+    behavior: 'smooth'
+  });
+}
 
 navItem1.addEventListener('click', () =>{
-  if (width < 1920 && width > 1020) {
-    width1 = 902
-  } else if (width < 840 && width > 500) {
-    width1 = 1090
-  }
-    window.scroll({
-        top: width1,
-        behavior: 'smooth'
-      });
+  scrollW(width1)
 })
 
 navItem2.addEventListener('click', () =>{
-  if (width < 1920 && width > 1020) {
-    width2 = 1590
-  } else if (width < 840 && width > 500) {
-    width2 = 1780
-  }
-    window.scroll({
-        top: width2,
-        behavior: 'smooth'
-      });
+  scrollW(width2)
+})
+
+navItem3.addEventListener('click', () =>{
+  scrollW(width3)
 })
 
 //Proyectos
@@ -51,6 +54,12 @@ let proyecto = proyectos[iProyecto - 1]
 proyecto.classList.remove('hidden')
 proyecto.classList.add('block')
 
+function ocultar () {
+  let proyecto = proyectos[iProyecto - 1]
+    proyecto.classList.remove('block')
+    proyecto.classList.add('hidden')
+}
+
 function deslizar (i) {
   let proyecto = proyectos[i - 1]
   proyecto.classList.remove('hidden')
@@ -66,15 +75,12 @@ function cooldownGenerator() {
 
 rightBtn.addEventListener('click', () => {
   if(iProyecto > 0  && iProyecto < proyectos.length) {
-    let proyecto = proyectos[iProyecto - 1]
-    proyecto.classList.remove('block')
-    proyecto.classList.add('hidden')
+    ocultar()
     iProyecto++
     deslizar(iProyecto)
     cooldownGenerator()
   } else {
-    proyectos[iProyecto - 1].classList.remove('block')
-    proyectos[iProyecto - 1].classList.add('hidden')
+    ocultar()
     iProyecto = 1
     deslizar(iProyecto)
     cooldownGenerator()
@@ -83,15 +89,12 @@ rightBtn.addEventListener('click', () => {
 
 leftBtn.addEventListener('click', () => {
   if(iProyecto > 1  && iProyecto < proyectos.length + 1) {
-    let proyecto = proyectos[iProyecto - 1]
-    proyecto.classList.remove('block')
-    proyecto.classList.add('hidden')
+    ocultar()
     iProyecto--
     deslizar(iProyecto)
     cooldownGenerator()
   } else {
-    proyectos[iProyecto - 1].classList.remove('block')
-    proyectos[iProyecto - 1].classList.add('hidden')
+    ocultar()
     iProyecto = proyectos.length
     deslizar(iProyecto)
     cooldownGenerator()
@@ -101,16 +104,13 @@ leftBtn.addEventListener('click', () => {
 setInterval(() => {
   if(iProyecto > 0  && iProyecto < proyectos.length) {
     if(!cooldown) {
-      let proyecto = proyectos[iProyecto - 1]
-      proyecto.classList.remove('block')
-      proyecto.classList.add('hidden')
+      ocultar()
       iProyecto++
       deslizar(iProyecto)
     }
   } else {
     if(!cooldown) {
-      proyectos[iProyecto - 1].classList.remove('block')
-      proyectos[iProyecto - 1].classList.add('hidden')
+      ocultar()
       iProyecto = 1
       deslizar(iProyecto)
     }

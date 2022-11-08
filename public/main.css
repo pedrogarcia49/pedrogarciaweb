@@ -85,6 +85,11 @@ img {
     list-style-image: url('images/li/li-mysql.png');
 }
 
+#backend #li-bash {
+    list-style-image: url('images/li/li-bash.png');
+}
+
+
 #backend #li-nginx {
     list-style-image: url('images/li/li-nginx.png');
 }
@@ -130,13 +135,13 @@ textarea {
 /* Utilities */
 
 .filter-blur {
-    background: linear-gradient(to bottom,rgba(0,0,0, 0.0),rgba(0,0,0, 0.0), rgba(0,0,0, 0.35));
+    background: linear-gradient(to bottom,rgba(0,0,0, 0.0),rgba(0,0,0, 0.0), rgba(0,0,0, 0.3));
     backdrop-filter: blur(5px);
 }
 
 .filter-blur-solid {
     background-color: rgba(0,0,0, 0.2);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(4.5px);
 }
 
 .filter-3 {
