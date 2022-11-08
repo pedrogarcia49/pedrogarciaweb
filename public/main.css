@@ -43,7 +43,7 @@ img {
 /* Tecnologias */
 
 #informacion {
-    background-image: url('images/bgs/info.png');
+    background-image: url('images/bgs/info.jpg');
     background-size: cover;
 }
 
@@ -94,7 +94,7 @@ img {
 /* Proyectos */
 
 #proyectos {
-    background-image: url(images/bgs/projects6.png);
+    background-image: url(images/bgs/projects.jpg);
     background-size: cover;
 }
 
