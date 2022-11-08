@@ -42,6 +42,11 @@ img {
 
 /* Tecnologias */
 
+#informacion {
+    background-image: url('images/bgs/info.png');
+    background-size: cover;
+}
+
 
 #frontend #li-html {
     list-style-image: url('images/li/li-html.png');
@@ -88,27 +93,23 @@ img {
 
 /* Proyectos */
 
-#gym-app {
-    background-image: url(./images/gym-app.png);
-    background-repeat: no-repeat;
+#proyectos {
+    background-image: url(images/bgs/projects6.png);
     background-size: cover;
 }
 
-#simon{
-    background-image: url(./images/simon.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+.proyecto-img {
+    object-fit: cover;
 }
 
-#tictactoe {
-    background-image: url(./images/tictactoe.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+#project-filter{
+    background: linear-gradient(to bottom, rgba(0,0,0, 0.4), rgba(0,0,0, 0.6));
+    backdrop-filter: blur(2px);
 }
 
 
-#project-filter:hover {
-    background: linear-gradient(to bottom, rgba(0,0,0, 0.0), rgba(0,0,0, 0.8));
+#slide-left, #slide-right {
+    user-select: none;
 }
 
 /* _____ */
@@ -128,6 +129,27 @@ textarea {
 
 /* Utilities */
 
+.filter-blur {
+    background: linear-gradient(to bottom,rgba(0,0,0, 0.0),rgba(0,0,0, 0.0), rgba(0,0,0, 0.35));
+    backdrop-filter: blur(5px);
+}
+
+.filter-blur-solid {
+    background-color: rgba(0,0,0, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.filter-3 {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,rgba(0,0,0, 0.0), rgba(0,0,0, 0.3));
+}
+
+.filter-4 {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,rgba(0,0,0, 0.0), rgba(0,0,0, 0.4));
+}
 
 .filter-5 {
     width: 100%;

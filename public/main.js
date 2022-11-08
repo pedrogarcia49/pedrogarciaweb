@@ -1,3 +1,8 @@
+setInterval(() => {
+  location.reload()
+}, 110000)
+
+//Nav
 const navItem1 = document.getElementById('nav-item1')
 const navItem2 = document.getElementById('nav-item2')
 const textarea = document.getElementById('textarea')
@@ -30,3 +35,84 @@ navItem2.addEventListener('click', () =>{
         behavior: 'smooth'
       });
 })
+
+//Proyectos
+
+const slider = document.getElementById('slider-proyectos')
+const proyectos = document.getElementsByClassName('proyecto')
+const leftBtn = document.getElementById('slide-left')
+const rightBtn = document.getElementById('slide-right')
+
+
+let iProyecto = 1
+let cooldown = false
+
+let proyecto = proyectos[iProyecto - 1]
+proyecto.classList.remove('hidden')
+proyecto.classList.add('block')
+
+function deslizar (i) {
+  let proyecto = proyectos[i - 1]
+  proyecto.classList.remove('hidden')
+  proyecto.classList.add('block')
+}
+
+function cooldownGenerator() {
+  cooldown = true
+  setTimeout(() => {
+    cooldown = false
+  }, 10000)
+}
+
+rightBtn.addEventListener('click', () => {
+  if(iProyecto > 0  && iProyecto < proyectos.length) {
+    let proyecto = proyectos[iProyecto - 1]
+    proyecto.classList.remove('block')
+    proyecto.classList.add('hidden')
+    iProyecto++
+    deslizar(iProyecto)
+    cooldownGenerator()
+  } else {
+    proyectos[iProyecto - 1].classList.remove('block')
+    proyectos[iProyecto - 1].classList.add('hidden')
+    iProyecto = 1
+    deslizar(iProyecto)
+    cooldownGenerator()
+  }
+})
+
+leftBtn.addEventListener('click', () => {
+  if(iProyecto > 1  && iProyecto < proyectos.length + 1) {
+    let proyecto = proyectos[iProyecto - 1]
+    proyecto.classList.remove('block')
+    proyecto.classList.add('hidden')
+    iProyecto--
+    deslizar(iProyecto)
+    cooldownGenerator()
+  } else {
+    proyectos[iProyecto - 1].classList.remove('block')
+    proyectos[iProyecto - 1].classList.add('hidden')
+    iProyecto = proyectos.length
+    deslizar(iProyecto)
+    cooldownGenerator()
+  }
+})
+
+setInterval(() => {
+  if(iProyecto > 0  && iProyecto < proyectos.length) {
+    if(!cooldown) {
+      let proyecto = proyectos[iProyecto - 1]
+      proyecto.classList.remove('block')
+      proyecto.classList.add('hidden')
+      iProyecto++
+      deslizar(iProyecto)
+    }
+  } else {
+    if(!cooldown) {
+      proyectos[iProyecto - 1].classList.remove('block')
+      proyectos[iProyecto - 1].classList.add('hidden')
+      iProyecto = 1
+      deslizar(iProyecto)
+    }
+  }
+}, 7000)
