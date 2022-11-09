@@ -1,6 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 img {
     user-select: none;
     pointer-events: none;
+}
+
+video {
+    line-height: 0;
 }
 
 /* Nav */
@@ -107,7 +116,11 @@ img {
     object-fit: cover;
 }
 
-#project-filter{
+[proyecto-ctn] {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.project-filter{
     background: linear-gradient(to bottom, rgba(0,0,0, 0.4), rgba(0,0,0, 0.6));
     backdrop-filter: blur(2px);
 }

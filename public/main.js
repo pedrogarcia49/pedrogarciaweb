@@ -42,9 +42,10 @@ navItem3.addEventListener('click', () =>{
 //Proyectos
 
 const slider = document.getElementById('slider-proyectos')
-const proyectos = document.getElementsByClassName('proyecto')
-const leftBtn = document.getElementById('slide-left')
 const rightBtn = document.getElementById('slide-right')
+const proyectos = document.querySelectorAll('[proyecto]')
+const contenidos = document.querySelectorAll('[proyecto-ctn]')
+const leftBtn = document.getElementById('slide-left')
 
 
 let iProyecto = 1
@@ -97,22 +98,34 @@ leftBtn.addEventListener('click', () => {
     ocultar()
     iProyecto = proyectos.length
     deslizar(iProyecto)
-    cooldownGenerator()
+    
   }
 })
 
-setInterval(() => {
-  if(iProyecto > 0  && iProyecto < proyectos.length) {
-    if(!cooldown) {
-      ocultar()
-      iProyecto++
-      deslizar(iProyecto)
-    }
-  } else {
-    if(!cooldown) {
-      ocultar()
-      iProyecto = 1
-      deslizar(iProyecto)
-    }
-  }
-}, 7000)
+contenidos.forEach(contenido => {
+  contenido.addEventListener('mouseover', () => {
+    console.log('H')
+    cooldown = true
+  })
+  contenido.addEventListener('mouseout', () => {
+    cooldown = false
+  })
+})
+
+  // Autoslide
+
+// setInterval(() => {
+//   if(iProyecto > 0  && iProyecto < proyectos.length) {
+//     if(!cooldown) {
+//       ocultar()
+//       iProyecto++
+//       deslizar(iProyecto)
+//     }
+//   } else {
+//     if(!cooldown) {
+//       ocultar()
+//       iProyecto = 1
+//       deslizar(iProyecto)
+//     }
+//   }
+// }, 7000)
